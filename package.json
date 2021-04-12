@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-mvp-starter",
+  "version": "1.0.0",
+  "description": "Simple backend starter project for MVP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node-dev --respawn --transpile-only --clear src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megaxayda/nodejs-mvp-starter.git"
+  },
+  "author": "megaxayda@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/megaxayda/nodejs-mvp-starter/issues"
+  },
+  "homepage": "https://github.com/megaxayda/nodejs-mvp-starter#readme",
+  "devDependencies": {
+    "@tsconfig/node14": "^1.0.0",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
+  }
+}
