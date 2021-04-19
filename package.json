@@ -4,8 +4,8 @@
   "description": "Simple backend starter project for MVP",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node-dev --respawn --transpile-only --clear src/index.ts"
+    "test": "NODE_ENV=test ts-mocha --paths -p tsconfig.json src/**/*.spec.ts",
+    "start": "NODE_ENV=dev ts-node-dev --respawn --transpile-only --clear -r tsconfig-paths/register src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,37 @@
   "homepage": "https://github.com/megaxayda/nodejs-mvp-starter#readme",
   "devDependencies": {
     "@tsconfig/node14": "^1.0.0",
+    "@types/bcrypt": "^3.0.1",
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.11",
+    "@types/jsonwebtoken": "^8.5.1",
+    "@types/lodash": "^4.14.168",
+    "@types/mocha": "^8.2.2",
+    "@types/morgan": "^1.9.2",
+    "@types/passport": "^1.0.6",
+    "axios": "^0.21.1",
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.3.2",
+    "nyc": "^15.1.0",
     "ts-node": "^9.1.1",
     "ts-node-dev": "^1.1.6",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "chalk": "^4.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "kill-port": "^1.6.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.12.3",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "ts-mocha": "^8.0.0"
   }
 }

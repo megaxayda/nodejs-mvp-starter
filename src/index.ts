@@ -1,3 +1,3 @@
-import a from './abc'
+import app from './app'
 
-a()
+app().catch(console.log)
