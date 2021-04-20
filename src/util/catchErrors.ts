@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express'
 import { MongoError } from 'mongodb'
 import get from 'lodash/get'
+import chalk from 'chalk'
 
 const catchErrors = (fn: Function) => (req: Request, res: Response, next: NextFunction) => {
     return fn(req, res, next).catch(
@@ -10,6 +11,13 @@ const catchErrors = (fn: Function) => (req: Request, res: Response, next: NextFu
                 res.status(400).send({ msg: 'Duplicated code' });
                 return;
             }
+
+            const trackId = (new Date()).toString();
+            console.group();
+            console.error(chalk.red('START: ' + trackId));
+            console.error(err);
+            console.error(chalk.red('END: ' + trackId));
+            console.groupEnd();
             return next
         })
 }

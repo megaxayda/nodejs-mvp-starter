@@ -27,6 +27,7 @@
     "@types/mocha": "^8.2.2",
     "@types/morgan": "^1.9.2",
     "@types/passport": "^1.0.6",
+    "@types/passport-jwt": "^3.0.5",
     "axios": "^0.21.1",
     "chai": "^4.3.4",
     "chai-http": "^4.3.0",
@@ -50,6 +51,7 @@
     "mongoose": "^5.12.3",
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
     "ts-mocha": "^8.0.0"
   }
 }
