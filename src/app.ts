@@ -57,7 +57,6 @@ export async function app() {
   });
 
   return server;
-  // return { app, db, server, client }; // for test
 }
 
 export default app;
