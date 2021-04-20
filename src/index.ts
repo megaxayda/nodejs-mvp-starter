@@ -1,3 +1,3 @@
-import app from './app'
+import app from "./app";
 
-app().catch(console.log)
+app().catch(console.log);

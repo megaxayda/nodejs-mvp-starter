@@ -1,1 +1,1 @@
-declare module 'kill-port'
+declare module "kill-port";
