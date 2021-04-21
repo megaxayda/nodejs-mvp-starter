@@ -10,7 +10,7 @@ const addUserRoute = async (router: Router) => {
 
 const getUsersHandler = async (req: Request, res: Response) => {
   const id = get(req, "user.id");
-  const user = await User.findOne({ _id: id }, { password: 0 }).exec();
+  const user = await User.findById(id, { password: 0 }).exec();
   res.send(user);
 };
 
