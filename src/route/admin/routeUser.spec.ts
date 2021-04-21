@@ -12,8 +12,6 @@ describe("user", () => {
   });
 
   after(async () => {
-    console.log("after");
-
     await mongoose.connection.db.dropCollection("user");
 
     server.close();
@@ -28,8 +26,8 @@ describe("user", () => {
     const res = await chai.request(server).post("/api/admin/register").send({
       username,
       password,
-      firstName: "tai",
-      lastName: "pham",
+      firstName: "Aiden",
+      lastName: "Pearce ",
       adminPass: "123456",
     });
 
@@ -53,8 +51,8 @@ describe("user", () => {
 
     expect(res3.status).to.equal(200);
     expect(res3.body).to.deep.includes({
-      firstName: "tai",
-      lastName: "pham",
+      firstName: "Aiden",
+      lastName: "Pearce ",
       username: "usernametest",
     });
   });

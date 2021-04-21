@@ -12,8 +12,6 @@ describe("auth", () => {
   });
 
   after(async () => {
-    console.log("after");
-
     await mongoose.connection.db.dropCollection("user");
 
     server.close();
@@ -28,8 +26,8 @@ describe("auth", () => {
     const res = await chai.request(server).post("/api/admin/register").send({
       username,
       password,
-      firstName: "tai",
-      lastName: "pham",
+      firstName: "Aiden",
+      lastName: "Pearce ",
       adminPass: "123456",
     });
 
@@ -41,8 +39,8 @@ describe("auth", () => {
     const res2 = await chai.request(server).post("/api/admin/register").send({
       username,
       password,
-      firstName: "tai",
-      lastName: "pham",
+      firstName: "Aiden",
+      lastName: "Pearce ",
       adminPass: "123456",
     });
 

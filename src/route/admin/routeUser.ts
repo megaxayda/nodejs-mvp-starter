@@ -1,6 +1,6 @@
 import { Request, Response, Router } from "express";
 import get from "lodash/get";
-import catchErrors from "util/catchErrors";
+import { catchErrors } from "utils";
 import User from "model/user";
 
 const addUserRoute = async (router: Router) => {

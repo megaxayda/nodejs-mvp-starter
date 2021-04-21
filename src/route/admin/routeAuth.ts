@@ -2,7 +2,7 @@ import { Router, Request, Response } from "express";
 import isEmpty from "lodash/isEmpty";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import catchErrors from "util/catchErrors";
+import { catchErrors } from "utils";
 import User from "model/user";
 const SALT_ROUNDS = 10;
 

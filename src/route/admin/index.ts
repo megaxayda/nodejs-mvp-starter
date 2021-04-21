@@ -2,6 +2,7 @@ import { Router } from "express";
 import passport from "passport";
 import addAuthRoute from "./routeAuth";
 import addUserRoute from "./routeUser";
+import addRouteCustomer from "./routeCustomer";
 
 const addAdminRoute = (mainRouter: Router) => {
   // Route /admin
@@ -18,6 +19,7 @@ const addAdminRoute = (mainRouter: Router) => {
   );
 
   addUserRoute(authAdminRouter);
+  addRouteCustomer(authAdminRouter);
 
   // Add more routes here
 };
