@@ -1,7 +1,7 @@
 import { Router } from "express";
 import passport from "passport";
-import addAuthRoute from "./authRoute";
-import addUserRoute from "./userRoute";
+import addAuthRoute from "./routeAuth";
+import addUserRoute from "./routeUser";
 
 const addAdminRoute = (mainRouter: Router) => {
   // Route /admin
