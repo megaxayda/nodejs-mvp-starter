@@ -16,7 +16,7 @@ const initPassport = (app: Express) => {
   passport.use(
     new passportJwt.Strategy(options, async function (jwtPayload, done) {
       try {
-        const user = await User.findOne({ _id: jwtPayload.id }).exec();
+        const user = await User.findById(jwtPayload.id).exec();
 
         if (isEmpty(user)) {
           throw new Error();
