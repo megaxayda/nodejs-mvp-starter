@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import app from "../../app";
+import app from "../../../app";
 import chai, { expect } from "chai";
 import chaiHttp from "chai-http";
 

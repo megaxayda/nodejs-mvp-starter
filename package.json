@@ -4,8 +4,10 @@
   "description": "Simple backend starter project for MVP",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test ts-mocha --paths -p tsconfig.json src/**/*.spec.ts",
-    "start": "NODE_ENV=dev ts-node-dev --respawn --transpile-only --clear -r tsconfig-paths/register src/index.ts"
+    "test": "NODE_ENV=test ts-mocha --paths -p tsconfig.json src/**/*.test.ts",
+    "dev": "NODE_ENV=dev ts-node-dev --respawn --transpile-only --clear src/index.ts",
+    "build": "tsc --project tsconfig.production.json",
+    "start": "NODE_ENV=production node dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -28,14 +30,12 @@
     "@types/morgan": "^1.9.2",
     "@types/passport": "^1.0.6",
     "@types/passport-jwt": "^3.0.5",
-    "axios": "^0.21.1",
     "chai": "^4.3.4",
     "chai-http": "^4.3.0",
     "mocha": "^8.3.2",
     "nyc": "^15.1.0",
     "ts-node": "^9.1.1",
     "ts-node-dev": "^1.1.6",
-    "tsconfig-paths": "^3.9.0",
     "typescript": "^4.2.4"
   },
   "dependencies": {

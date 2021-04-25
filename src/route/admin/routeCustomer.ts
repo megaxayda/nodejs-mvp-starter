@@ -1,7 +1,7 @@
 import { Request, Response, Router } from "express";
 import get from "lodash/get";
-import { catchErrors, generateFieldsQuery } from "utils";
-import Customer from "model/customer";
+import { catchErrors, generateFieldsQuery } from "../../utils";
+import Customer from "../../model/customer";
 
 const addCustomerRoute = async (router: Router) => {
   router.get("/customer/:id", catchErrors(getHandler));
