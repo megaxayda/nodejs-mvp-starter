@@ -35,7 +35,9 @@ export async function app() {
     console.log(chalk.blue('NODE_ENV:', process.env.NODE_ENV));
     console.log(chalk.blue('MONGO_URI:', process.env.MONGO_URI));
     console.log(chalk.blue('SECRET:', process.env.SECRET));
-  } else {
+  }
+
+  if (process.env.NODE_ENV === 'production') {
     app.use(
       cors({
         origin: process.env.ORIGIN,
@@ -43,6 +45,7 @@ export async function app() {
       })
     );
   }
+
   if (NODE_ENV !== 'test') {
     app.use(morgan(NODE_ENV === 'dev' ? 'dev' : 'combined'));
   }
